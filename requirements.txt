@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+genai
+python-dotenv
+mysql-connector-python
+tiktoken
+uuid
+google-generativeai
