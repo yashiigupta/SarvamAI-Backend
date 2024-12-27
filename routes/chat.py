@@ -73,7 +73,7 @@ def chat(usertoken: str, chatid: int, message: str):
         return {"message": "chat not found"}
     chat = chat[0]
     data = json.loads(chat["data"])
-    response = aiResponse(message, data, "This chat is about the topic: " + chat["description"])
+    response = aiResponse(message, data, "Only give your answers in maximum of 150 words. This chat is about the topic: " + chat["description"])
     data.append({"role": "user", "message": message})
     data.append({"role": "assistant", "message": response.text})
     json_data = json.dumps(data)
